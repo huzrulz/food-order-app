@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Order delicious sweet and savoury dishes. Get a quotation for your food order.">
+    <title>Delicious Food Order - Sweet & Savoury Dishes</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header and Navigation -->
+    <header>
+        <nav class="navbar" role="navigation" aria-label="Main navigation">
+            <div class="container">
+                <div class="nav-brand">
+                    <h1><i class="fas fa-utensils"></i> Delicious Bites</h1>
+                </div>
+                <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#featured">Featured</a></li>
+                    <li><a href="#reviews">Reviews</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li>
+                        <button class="cart-btn" aria-label="View cart">
+                            <i class="fas fa-shopping-cart"></i>
+                            <span class="cart-count" id="cart-count">0</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Carousel -->
+    <section id="home" class="hero" aria-label="Hero carousel">
+        <div class="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="carousel-content">
+                        <h2>Delicious Sweet Treats</h2>
+                        <p>Indulge in our handcrafted desserts and sweet delicacies</p>
+                        <a href="#featured" class="btn btn-primary">Explore Menu</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-content">
+                        <h2>Savory Delights</h2>
+                        <p>Experience authentic flavors with our savoury dishes</p>
+                        <a href="#featured" class="btn btn-primary">Order Now</a>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="carousel-content">
+                        <h2>Get Your Quotation</h2>
+                        <p>Add items to cart and receive a custom quotation</p>
+                        <a href="#featured" class="btn btn-primary">Start Ordering</a>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control prev" aria-label="Previous slide">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="carousel-control next" aria-label="Next slide">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+            <div class="carousel-indicators" role="tablist" aria-label="Slide indicators">
+                <button class="active" aria-label="Go to slide 1" aria-selected="true"></button>
+                <button aria-label="Go to slide 2" aria-selected="false"></button>
+                <button aria-label="Go to slide 3" aria-selected="false"></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Dishes Section -->
+    <section id="featured" class="featured-dishes">
+        <div class="container">
+            <h2 class="section-title">Featured Dishes</h2>
+            
+            <!-- Sweet Dishes -->
+            <div class="category">
+                <h3><i class="fas fa-candy-cane"></i> Sweet Dishes</h3>
+                <div class="dishes-grid" id="sweet-dishes">
+                    <!-- Dishes will be populated by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Savoury Dishes -->
+            <div class="category">
+                <h3><i class="fas fa-drumstick-bite"></i> Savoury Dishes</h3>
+                <div class="dishes-grid" id="savoury-dishes">
+                    <!-- Dishes will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Reviews Section -->
+    <section id="reviews" class="reviews">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <div class="reviews-grid">
+                <div class="review-card">
+                    <div class="rating" aria-label="Rating: 5 out of 5 stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"The sweet dishes are absolutely amazing! Best desserts I've ever tasted."</p>
+                    <p class="reviewer-name">- Sarah Johnson</p>
+                </div>
+                <div class="review-card">
+                    <div class="rating" aria-label="Rating: 5 out of 5 stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="review-text">"Great savoury options and the quotation process is very convenient."</p>
+                    <p class="reviewer-name">- Michael Chen</p>
+                </div>
+                <div class="review-card">
+                    <div class="rating" aria-label="Rating: 4 out of 5 stars">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="far fa-star"></i>
+                    </div>
+                    <p class="review-text">"Excellent variety and quality. The ordering system is user-friendly."</p>
+                    <p class="reviewer-name">- Emily Rodriguez</p>
+                </div>
+            </div>
+            
+            <!-- Review Form -->
+            <div class="review-form-section">
+                <h3>Share Your Experience</h3>
+                <form id="review-form" class="review-form">
+                    <div class="form-group">
+                        <label for="reviewer-name">Your Name <span aria-label="required">*</span></label>
+                        <input type="text" id="reviewer-name" name="name" required aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="rating">Rating <span aria-label="required">*</span></label>
+                        <select id="rating" name="rating" required aria-required="true">
+                            <option value="">Select rating</option>
+                            <option value="5">5 Stars - Excellent</option>
+                            <option value="4">4 Stars - Very Good</option>
+                            <option value="3">3 Stars - Good</option>
+                            <option value="2">2 Stars - Fair</option>
+                            <option value="1">1 Star - Poor</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="review-text">Your Review <span aria-label="required">*</span></label>
+                        <textarea id="review-text" name="review" rows="4" required aria-required="true"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Review</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Shopping Cart Modal -->
+    <div id="cart-modal" class="modal" role="dialog" aria-labelledby="cart-title" aria-modal="true" hidden>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="cart-title">Your Cart</h2>
+                <button class="close-modal" aria-label="Close cart">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div id="cart-items">
+                    <p class="empty-cart">Your cart is empty</p>
+                </div>
+                <div id="cart-total" class="cart-total" hidden>
+                    <strong>Total: $<span id="total-amount">0.00</span></strong>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary close-modal">Continue Shopping</button>
+                <button id="get-quotation" class="btn btn-primary" disabled>Get Quotation</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Quotation Modal -->
+    <div id="quotation-modal" class="modal" role="dialog" aria-labelledby="quotation-title" aria-modal="true" hidden>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="quotation-title">Request Quotation</h2>
+                <button class="close-quotation" aria-label="Close quotation form">&times;</button>
+            </div>
+            <div class="modal-body">
+                <form id="quotation-form">
+                    <div class="form-group">
+                        <label for="customer-name">Full Name <span aria-label="required">*</span></label>
+                        <input type="text" id="customer-name" name="name" required aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-email">Email <span aria-label="required">*</span></label>
+                        <input type="email" id="customer-email" name="email" required aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="customer-phone">Phone Number <span aria-label="required">*</span></label>
+                        <input type="tel" id="customer-phone" name="phone" required aria-required="true">
+                    </div>
+                    <div class="form-group">
+                        <label for="delivery-date">Preferred Delivery Date</label>
+                        <input type="date" id="delivery-date" name="deliveryDate">
+                    </div>
+                    <div class="form-group">
+                        <label for="special-requests">Special Requests</label>
+                        <textarea id="special-requests" name="requests" rows="3"></textarea>
+                    </div>
+                    <div id="quotation-summary">
+                        <h3>Order Summary</h3>
+                        <div id="quotation-items"></div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Submit Quotation Request</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Delicious Bites</h3>
+                    <p>Your one-stop destination for delicious sweet and savoury dishes.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#featured">Menu</a></li>
+                        <li><a href="#reviews">Reviews</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contact Info</h3>
+                    <p><i class="fas fa-phone"></i> +1 (555) 123-4567</p>
+                    <p><i class="fas fa-envelope"></i> info@deliciousbites.com</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Delicious Bites. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/app.js"></script>
+</body>
+</html>
